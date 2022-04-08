@@ -1,0 +1,539 @@
+---
+title: Cultural Mobility Yearbook 2021
+output:
+  pdf_document:
+    latex_engine: xelatex
+    includes:
+      in_header: preamble.tex
+  word_document: default
+mainfont: Peclet
+sansfont: Peclet
+font-family: Peclet
+---
+
+
+\pagenumbering{gobble} 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '~/Documents/R/otm-yearbook')
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo = FALSE, dev = "cairo_pdf")
+```
+
+
+\newpage
+\pagenumbering{arabic}
+
+```{r, include=FALSE}
+source("scripts/00_get-data.R")
+
+```
+
+\newpage
+
+## Methodology
+
+This report explores trends in cultural mobility during 2021. It does this primarily through a quantitative and qualitative analysis of calls for participation in residencies, meetings, fellowships, training activities, and other funded mobility opportunities for artists and culture professionals that were published on the On the Move website between 1 January – 31 December 2021 (with a few comparative references to the same data from 2020). 
+
+In 2021, this gives us a dataset of 641 calls involving 76 countries. While it is not a complete picture of all activity, it represents our best effort to monitor activity in the mobility field, helped by our international network of more than 50 member organisations. 
+
+The report also references other studies and reports produced by other actors in the field.
+
+### Scope and limitations
+
+Because the dataset comes from calls published on the On the Move website it has some specific characteristics:
+
+-	It reflects On the Move’s editorial policy and focus. This policy can be read in detail on our website, but we focus on funded programmes that cover at least some of the costs of travel (or that offer remuneration in the case of online/remote programmes). The calls that are posted to the website, and therefore analysed here, are generally one-off calls rather than those for ongoing, regularly funded programmes (which are separately listed in our mobility funding guides). 
+-	On the Move covers all art forms: Performing Arts (theatre, dance, opera, circus, street arts, etc.), Visual Arts & Design (painting, sculpture, photography, installation, independent film, etc.), Digital and New Media (electronic art, new media, web, etc.), Music & Sound, Literature (including translation), Cultural Heritage (tangible heritage, movable heritage, intangible heritage, archives), and Cross-disciplinary forms. We usually don't cover commercial film and other creative industries sectors outside the above categories. 
+-	We cover opportunities for all actors in the sector: artists, culture professionals and/or cultural organisations (from institutions to small collectives and associations), funders, policymakers, curators, and researchers.
+-	We strive to cover the field as fully as possible, but our network is more concentrated in Europe, and in the English and French languages, so we expect to have some blind spots. These gaps in terms of coverage also point to long-standing structural imbalances in the mobility field.
+-	Usually we know the principal organiser and the destination for a mobility activity (e.g. a residency centre in Poland), but we do not know who will ultimately become the beneficiary of a programme or opportunity (e.g. a visual artist from Albania). As such, when we look at ‘origin’ countries or regions this refers to the location of the call’s organising entities, and where we are able to map flows these are flows of organisational and logistical capacity rather than mobility flows of beneficiaries.
+-	The number of beneficiaries, and therefore the scale of programmes, is not captured. So one call might refer to an opportunity for a single professional to attend a conference, while another might refer to a large-scale programme awarding multiple grants to multiple beneficiaries.
+-	Some other caveats apply for specific classifications, but are noted in the text.
+
+While the above points are important to keep in mind, the data in this publication nonetheless aims to provide a close look at shifts in the mobility field to help identify promising areas for qualitative analysis and further research, as well as blank spots that need more support and attention from the field at large.
+
+### Geographical regions 
+
+For geographical analysis, this report uses the United Nations M49 geoscheme, which organises countries into regions (Africa, Asia, Americas, Europe and Oceania) as well as sub-regions (Central Asia, Eastern Asia, South-eastern Asia, etc.). The relevant countries are listed during the regional breakdowns in the overview section.
+
+
+## Overview
+
+```{r, include=TRUE}
+source("scripts/01_opportunity-type-by-mobility-type.R")
+
+table %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+
+
+```{r, include=TRUE}
+source("scripts/02_mobility-type.R")
+
+```
+
+
+```{r, include=TRUE}
+source("scripts/03_target-scope-by-mobility-type.R")
+
+table %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+
+```{r, include=TRUE}
+source("scripts/04_target-by-mobility-type.R")
+
+table %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+
+In 2021, the On the Move website featured 641 calls for funded mobility opportunities, involving 76 countries as destinations, hundreds of organisers and collaborators, and a wide array of familiar and unusual formats – evidence of a very active field. Yet 2021, like the year before it, saw significant disruption for the sector as it was affected by a shifting patchwork of rules and regulations concerning cross-border travel, with many twists and turns over the course of the year.
+     
+This disruption is hard to quantify in our data on opportunities, as it will lie partly in activities that were later cancelled, or that never progressed past the planning phase due to adverse conditions. While 2020 likely faced a higher level of disruption (summarised in some detail by KEA in a November 2020 report for the Council of Europe which described the cultural and creative sector as ‘profoundly wounded’) many public health measures and restrictions of course continued in 2021.  Even among the activities that did happen despite the Covid-19 pandemic, the numbers don’t tell the whole story. In 2021, the residency remained the primary format for mobility opportunities in our data (41.7% of all calls), but the definition of what a residency is has blurred, and the core residency ‘offer’ has expanded in some areas and contracted in others, with fewer opportunities to inhabit new workspaces, and more at-home, remote or online opportunities that include a greater focus on activities such as mentoring or simply on financial support. Project funding (13.4%) has lately involved more programmes helping individuals and organisations to adapt, or survive, perhaps without the requirement of a regular project ‘output’, while the idea of ‘meetings’ or ‘collaborations’ (12.6%) has virtualised in ways that most will have experienced in their working lives.   
+
+Indeed, the amount of work that took place in digital spaces is the most visible change in our data. If 2020, was the year a portion of mobility went online, then in 2021 it stayed there, with 29.4% of calls that defined a format employing digital/remote programmes that mixed online work with in-person activities (against 26.1% in 2020). We cover this turn towards online work in more detail later on in the section on digital mobility, but the short version is that, following more ad hoc measures in 2020, the formats have become more thoughtful and complex, hybrid models are catching on, and the signs suggest this might be an enduring shift in how mobility is done – if not necessarily who organises it, or who benefits from it. 
+
+In-person mobility has faced more difficult conditions, but still makes up the majority of mobility activity within our calls (70.6%). Once again, the numbers themselves don’t necessarily capture changes to the reality and experience of travel, nor to different conditions of work. Indeed, Covid-19 has had an end to end effect on the mobility process – influencing planning, travel, artistic creation and presentation. The impacts have ranged from reductions in programme eligibility (e.g. a call opening only to neighbouring countries), to more complex and expensive travel processes (with covid testing and mandatory quarantines seldom covered by organisers), to an emerging demand for ‘covid safe’ or ‘corona proof’ formats (performances, artworks or projects suitable for distanced and perhaps outdoor participation).
+
+## Art forms
+
+```{r, include=TRUE}
+source("scripts/05_artform-by-mobility-type.R")
+
+table %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+
+```{r, include=TRUE, fig.height=12, fig.width=8}
+source("scripts/06_opportunity-type-by-artform.R")
+grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
+
+```
+
+```{r, include=TRUE, fig.height=12, fig.width=8}
+grid.arrange(plot5, plot6, plot7, ncol=2)
+
+```
+
+Among art forms, the Cross-disciplinary category (indicating both calls open to any discipline and ones aimed at interdisciplinary approaches) was by some distance the largest, at 40.8% of all calls. This high level of activity is part of a long-term trend in the cultural field, driven by an increasing willingness to let the arts exist across different spaces – encompassing outdoor and site-responsive work, community projects, cross-sectoral collaborations, and now, increasingly, the online world.
+
+Visual Arts & Design and Performing Arts were forms for 19.8% and 16% of calls respectively. While they both favoured the residency format, Performing Arts (and Music & Sound) have a greater emphasis on meetings and collaboration, and are more oriented towards presenting work (with presentation opportunities in the visual arts often involving the mobility of the artwork, not the artist). 
+
+Other art form categories had lower volume in 2021, but we can note that the Digital / New Media category (5.1%) has been more active due to the move online. This is in spite of the fact that many projects taking a digital approach fall into the Cross-disciplinary category, with numerous examples of collaborations between artists and technologists. Literature at 5.2% is ordinarily a less active discipline in mobility, partly because it doesn’t have as many specialist arts centres ready to host writers. Programmes often emerge therefore around translation (sometimes supported by state funders looking to promote a language abroad), as well as through special programmes like the UNESCO Cities of Literature scheme, which in 2021 led to residencies in Ljubljana, Wonju, Granada and Melbourne.
+
+
+## Cross-sectoral working
+
+While there was a diverse array of cross-sectoral projects in 2021, a major theme was initiatives focusing on the intersection of art and science or art and technology. This line of inquiry is not new, but does seem to be undergoing a small renaissance, and in recent years activity has been filtering down from partnerships between large-scale organisations to programmes that involve smaller and independent companies, or individual artists. Higher interest is perhaps driven by a wider societal movement towards science as a means of getting around ideological conflicts, and in the case of technology by the need to find new ways to present artistic work and connect over distance. 
+
+2021 saw the continuation of long-running programmes such as the residencies at CERN in Switzerland, as well as new entrants including the Leonardo Rebooted grants offered by Da Vinci Labs, a multidisciplinary research centre being built in the Touraine region of France, and landmark projects such as the S+T+ARTS4Water call, which offered ten residencies relating to ten ‘regional water challenges’ throughout Europe, from dealing with pollution in the Adriatic Sea to promoting biodiversity in the port of Rotterdam.  
+
+Collaborations between art and science were largely focused in Europe and North America, at least in the context of mobility – with 85.3% of calls involving organisers from Europe or the USA. 23.5% of all calls in this category in 2021 involved a German partner – by far the most active country in this category, thanks in part to research institutes like the Akademie der Künste, Technische Universität Dresden, Max Planck Institute for Empirical Aesthetics, and ZKM – Zentrum für Kunst und Medien. 
+
+Among the handful of art-science projects from other parts of the world in 2021, we can count Silo - Arte e Latitude Rural’s artist/curator residency in the Atlantic Forest domain, which invited artists and scientific researchers to exchange knowledge within the Environmental Protection Area of Brazil’s Serrinha do Alambari – one of many projects applying an art-scientific approach in the context of environmental issues.
+
+
+## Regions 
+
+```{r, include=TRUE}
+source("scripts/07_regional-flows.R")
+
+library(webshot)
+webshot("output/region-sankey.html" , "output/sankey1.pdf", delay = 0.2)
+
+matrix1 %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+
+Calls with mobility destinations in multiple regions were unusual – making up less than 5% of all opportunities published by On the Move in 2021. Intercontinental cooperation itself is also somewhat rare, and often motivated by projects that explicitly examine regional relations. An example from 2021 was Culturescape’s project ‘Quilombo’, which aimed to build on the idea of a ‘Black Atlantic’ in inviting Congolese, Brazilian and Swiss artists to a residency at Lago Mio Lugano to generate an ‘alternative reading of human relations between the three continents’.  
+
+Among the individual regions, Oceania – by far the smallest by population size, and affected by strict controls in Australia and New Zealand – had only 2 calls in our 2021 data, but for other world regions some closer analysis is possible.
+
+
+### Africa
+
+```{r, include=TRUE}
+region_param <- "Africa"
+
+nrow(clean %>% filter(str_detect(destination_region, region_param) |
+                         str_detect(origin_region, region_param)))
+
+source("scripts/09_mobility-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/10_target-scope-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/11_artform-regional.R")
+
+```
+
+
+```{r, include=TRUE}
+
+library(webshot)
+webshot("output/region-sankey2.html" , "output/sankey2.pdf", delay = 0.2)
+
+matrix2 %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+```{r, include=TRUE}
+source("scripts/13_destinations-map-africa.R")
+
+```
+
+In terms of mobility destinations, South Africa was the most prominent African country (7 calls), followed by Egypt (4). While overall there were mobility opportunities for 15 countries, the majority of these countries only had one or two calls, and so activity was scattered.
+
+Mobility organisers active in African countries included larger public bodies such as the Centre Culturel de Rencontre International John Smith in Benin (part of the network of ACCR cultural centres founded in France and expanded internationally), and the Javett Art Centre (attached to the University of Pretoria), as well as a few independent organisations like the arts centre Don Sen Folo in Mali and the École des Sables dance school in Senegal. At a regional scale, the Music in Africa Foundation (based in Johannesburg, but covering the continent) led two big partnered funding schemes: the Sounds Connect Fund, supporting capacity building in Southern Africa (with Goethe-Institut and ACP-EU funding), and Music in Africa Live (supported by Germany’s Federal Foreign Office and again the Goethe-Institut) which focused on supporting digital showcases and initiatives.  
+
+Looking to outside partners, France and Germany were both very active collaborators, with 42.1% of calls involving mobility to African countries having an organiser from one of the two countries. This activity was principally led by Institut français and Goethe-Institut or their regional offices – certainly as funders, but also as organisers and producers. For the most part, funded mobility opportunities between Africa and other regions were brokered by larger institutions, with collaboration taking place between funders, universities and foundations – though of course with local organisations likely involved in the delivery of activities on the ground.
+
+It’s worth noting that there is a large body of intraregional activity that is not represented here. Festivals and events in Africa often open applications to artists across the continent, but in doing so cover everything except international travel (fee, accommodation, meals, travel inside the country of the organiser). As such, support for international mobility is a kind of missing link.
+
+### Digital mobility
+
+While there are few examples of funding for in-person, intraregional cooperation, African organisations embraced digital mobility in 2021, with 62.5% of all calls involving organisers based in Africa taking place in either online or mixed formats. These opportunities were often focused on training and adaption – as was the case with the BASITA Fellowship scheme, an online capacity building programme for performing arts groups from the Middle East, or Fakugesi Festival’s digital bootcamps and labs, which were designed to provide practitioners with training before inviting them to pitch for a festival commission. 
+Such initiatives reflect points raised during UNESCO debates organised as part of the ResiliArt project and summarised in a report from February 2021: ‘[In Africa] the issues surrounding the rapid digital transformation were discussed more frequently and at length than in any other region. The artists shared various needs to successfully complete the digital transition and achieve fair remuneration including ICT infrastructure, fight against piracy, and affordable data.’ 
+
+Compared to 2020, however, there were also more initiatives that focused on creative production or exchange, including the New Conversations Egypt fund supporting co-creation between organisations in the UK and Egypt, and an online retreat organised by Tashweesh Festival that focused on ‘working and organising on feminisms, gender and sexuality’. 
+
+
+### Americas
+
+```{r, include=TRUE}
+region_param <- "Americas"
+
+nrow(clean %>% filter(str_detect(destination_region, region_param) |
+                         str_detect(origin_region, region_param)))
+
+source("scripts/09_mobility-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/10_target-scope-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/11_artform-regional.R")
+
+```
+
+```{r, include=TRUE}
+
+library(webshot)
+webshot("output/region-sankey4.html" , "output/sankey4.pdf", delay = 0.2)
+
+matrix4 %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+```{r, include=TRUE}
+source("scripts/14_destinations-map-americas.R")
+
+```
+
+In our 2021 data, the United States of America was the biggest destination for the Americas region (22 calls), followed by Canada (6). In Latin America and the Caribbean there were just a handful of calls for Brazil, Colombia, French Guiana, and Panama. 
+
+The region had less focus on cross-disciplinary or discipline agnostic work compared to Europe and other regions. This is driven particularly by the US, where more than a third of calls (13 of 36) focused exclusively on visual arts and design. For in-person mobility, the ratio is even higher (9 of 18). This focus is driven by visual arts schools and university departments which run residencies and fellowships. These include the Sam Fox School of Design & Visual Arts, Emmanuel College, and the Eskenazi School of Art, Architecture + Design. Private foundations such as the Magnum Foundation (supporting photography) and The Clark Art Institute in Massachusetts also focus on visual arts.
+
+Universities in general are major instigators of mobility for the region. However, unlike in Europe, where university-led mobility tends to be framed by a specific research programme or project, in the US the artist is generally free to pursue their own research in return for taking on some teaching commitments. This is in fact the case more broadly: mobility opportunities seem less likely to be themed or set to a particular artistic brief, but are perhaps more likely to carry other responsibilities such as community engagement and outreach work.
+
+Alongside universities, private foundations like Amant Foundation in New York have been important sources of opportunity, alongside commercial companies like Thoughtworks (a technology consultancy with an arts armature) or Ginko Bioworks (a biotech).  
+
+In 2021, the Americas had no outflows and no subregional flows – meaning calls with organisers in Northern America either organised mobility to Northern America or engaged in digital mobility, and the same was true for Latin America and the Caribbean. 
+
+### Digital mobility
+
+Once again, the US was the major organiser for digital mobility, with 48.6% of calls with US organisers taking online or mixed formats. Several of these opportunities were replacements for in-person residencies or fellowship programmes and simply redirected resources towards remote work. However, there were also initiatives that took greater advantage of the affordances of online work, such as onebeat’s co-creation residency for artists from the USA and Lebanon, which brought musicians together to create new ensembles and engage them in writing music and attending virtual masterclasses, or Ginko Bioworks’ creative residency for artists to ‘investigate how language interacts with technology’ in relation to synthetic biology. 
+
+While examples from Latin America were rarer, there were two digital calls in 2021 from Brazilian museums: the Museums Without Walls programme of MAES – Espírito Santo Art Museum, which invited artists to reimagine the museum in virtual space, and MM Gerdau’s call for online projects promoting science awareness. 
+
+
+### Asia
+
+```{r, include=TRUE}
+region_param <- "Asia"
+
+nrow(clean %>% filter(str_detect(destination_region, region_param) |
+                         str_detect(origin_region, region_param)))
+
+source("scripts/09_mobility-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/10_target-scope-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/11_artform-regional.R")
+
+```
+
+
+```{r, include=TRUE}
+
+library(webshot)
+webshot("output/region-sankey3.html" , "output/sankey3.pdf", delay = 0.2)
+
+matrix3 %>%
+  kbl(longtable = TRUE) %>%
+  column_spec(1:7, width = "0.7in") %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+```{r, include=TRUE}
+source("scripts/15_destinations-map-asia.R")
+
+```
+
+The Asian region covers a number of divergent situations in terms of cultural mobility. In the northern parts of Western Asia, mobility is primarily characterised by connection with EU programmes which in 2021 accounted for 35% of calls with destinations in Western Asia and create opportunities for mobility to Cyprus, Turkey and Georgia. For the Middle Eastern countries such as United Arab Emirates, Palestine and Saudi Arabia, it is government programmes and large institutions like Sharjah Art Foundation in UAE are more prominent. Southern Asia is largely a blank spot in our data, with only India having activity. Finally, in South-eastern and Eastern Asia, Japan, South Korea and Singapore have continued to be very active – and in 2021 took a particular bent towards online programmes. Since the start of the pandemic, cross-border mobility to China has largely not been possible – though some programmes have continued more locally (for instance the PLAN8T residency in Changsha, which issued a call for international residents but only those who had crossed Chinese borders before the advent of restrictions). 
+
+It seems somewhat rare to have cooperation between countries in these subregions, and multinational cooperation is more likely to involve partners in Europe: among calls in our data, 26.8% with an organiser based in Asia also involved one based in Europe. 
+
+### Digital mobility
+
+In 2021, online programmes played a large role in Asian mobility, with 44.6% of all calls that involved an Asian organiser taking an online/remote or mixed format. 
+
+In 2021, Japan accounted for around a quarter of all digital/remote/mixed calls in Asia, and half of those in Eastern Asia (where Taiwan and South Korea make up most of the remainder), emphasising a move online that had already begun in 2020. Saison Foundation reprised its online research residency launched in the early months of the pandemic (and increased the grant amount).  Sapporo Tenjinyama Art Studio, after attempting a mixed format in 2020, moved to an online/remote residency in 2021, with the interesting twist that a studio/accommodation budget was still provided, with artists invited to find a residency site in their own country while being coached online.  There were also mixed formats, such as the Tokyo Festival Farm project, which invited artists to join in the creation of a new performing arts production, with a month of online rehearsals and then a month of in-person ones in Tokyo.  
+
+In Western Asia, online mobility was less pronounced but still present, with examples including Warehouse421’s Homebound Residency call, and Tbilisi Photo Festival’s residency, mentorship and production programme for South Caucasian women photographers.
+
+
+
+### Europe
+
+```{r, include=TRUE}
+region_param <- "Europe"
+
+nrow(clean %>% filter(str_detect(destination_region, region_param) |
+                         str_detect(origin_region, region_param)))
+
+source("scripts/09_mobility-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/10_target-scope-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/12_opportunity-type-regional.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/11_artform-regional.R")
+
+```
+
+
+```{r, include=TRUE}
+
+library(webshot)
+webshot("output/region-sankey5.html" , "output/sankey5.pdf", delay = 0.2)
+
+matrix5 %>%
+  kbl(longtable = TRUE) %>%
+  column_spec(1:7, width = "0.7in") %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+```{r, include=TRUE}
+source("scripts/16_destinations-map-europe.R")
+
+```
+
+Reflecting higher levels of cultural subvention, Europe emerges in our data as the world region with the highest level of funded cultural mobility – with 82.4% of calls either having an organiser based in Europe or supporting mobility to the region.
+
+The European mobility field is quite diverse. In 2021, 37 countries were destinations for mobility. Large centres of activity do appear within this picture, with Germany, France, Italy, Spain and the UK acting as destinations for slightly more than half of all calls for the region, but this is somewhat in line with their combined population size (a little less than half of the European population). 
+
+European mobility is also distinguished by a high level of interconnection between its sub-regions – Northern, Southern, Eastern and Western Europe – in terms of collaboration and the flow of organisational resources. A major factor in these internal flows is funding from the EU, and cooperation projects in particular play an important role in driving interregional cooperation – with 64.5% of those with calls we circulated in 2021 involving partners spread across at least three of the sub-regions with countries eligible for the Creative Europe programme (Northern, Southern, Eastern and Western Europe, plus Western Asia and Northern Africa). 41.6% of calls that involved organisers and destinations across multiple European subregions came from cooperation projects. 
+
+In the mobility field, the majority of EU support comes from funding for cooperation projects, and in 2021 On the Move circulated 42 calls from 31 separate projects. While these contribute broadly to mobility at the European level, they also have a rebalancing effect in providing opportunities for mobility to countries with lower levels of national funding. Overall, in 2021 EU schemes such as Creative Europe, Horizon 2020, Erasmus+, and special programmes were supporters or co-funders for 19.7% of calls from our data that had an organiser in Europe, or 19.3% of calls that had a mobility destination in Europe – so a little under 1 in 5. Major projects supported by the EU during 2021 also include the i-Portunus mobility scheme, which in its 2020-21 round supported 320 individual grantees involved in 191 projects, and the Perform Europe project, which funds organisations to reimagine cross-border performing arts presentation.
+
+Beyond larger funders, Europe is notable for the breadth and depth of its organisational capacity, with opportunities coming from actors of all sizes – from independent companies to universities to private foundations. As such, there are more ‘second order’ opportunities, where instead of mobility opportunities coming directly from a funding body they are shaped by an organisation, festival, or other actor which has already secured project support. In the process, calls often develop a thematic/conceptual underpinning, seeking contributions that can fit into an existing artistic programme, vision, or research remit. Festivals play a special role in this, often mixing in other activities such as a small residency before or during their main programme, and inviting artists not only to present existing work but to adapt or recreate it – as was the case for example with the minus20degree festival in Flachau, which called for works suitable for outdoor presentation in the depths of the Austrian winter.  
+
+Driven partly by EU programmes, as well as by cultural export bodies such as the Goethe-Institut, Pro Helvetia or Institut français, Europe is also the region which did the most to organise mobility with destinations in other regions. 
+
+
+### Digital mobility
+
+Online work was important in Europe, though proportionally somewhat less so than for organisers in Africa, Asia and the Americas. Western and Northern Europe were major drivers, with the United Kingdom, the Netherlands, and Sweden among the most active. 
+
+```{r, include=TRUE}
+source("scripts/08_online-by-country-europe.R")
+
+table %>%
+  kbl(longtable = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"))
+
+```
+
+The high level of activity in Northern European countries to some degree tracks their placement in Eurostat data on the use of ICT for cultural purposes. Even among this grouping, however, the UK stands out as a major source of online mobility, with 46.5% of calls from organisers in the country taking digital or mixed formats. The British Council has been a key funder in this, but there is also a broader base of organisations involved in coordinating digital work, with Brexit perhaps providing some tailwinds by pushing organisations to solve problems around incoming restrictions on touring and work visas. 
+
+While the residency format was important for digital mobility, the most common digital opportunities involving European organisers were those that revolved around meetings (including online networking and conference participation) and collaborations (often pairing artists up or organising them into groups). From 2020 to 2021, this category rose from 10.7% to 23% of digital/mixed formats, reflecting an increasing sophistication and willingness to design collaborative formats for online work.  
+
+Relatively, and perhaps recognising the challenges of getting work online, opportunities to present or even adapt existing work were less common (6.3%) than commissions and project funding to create new works (15.9% and 14.3%, respectively). Compared to 2020, there were overall more commissions for new work in flexible formats (such as Finnish National Opera and Ballet’s partnership with Assembly festival to create a ‘digitally augmented’ CircOpera 2.0) or work that was digitally native (such as a call from Garage Museum in Russia for the online exhibition Situated Worlds). 
+
+\newpage
+
+## Digital mobility
+
+In the first weeks of the pandemic, the rush to take cultural activities online was widespread among both venues and audiences, and during this time large-scale cultural centres, galleries and museums reported some incredible numbers. In April 2020, the National Theatre in London launched their National Theatre at Home programme, with its first production One Man, Two Guvnors reaching a viewership of more than 200,000.  On the other side of the world, The Met in New York crashed their website in March 2020 by announcing a series of free nightly opera streams. This programme would go on to run for 16 months, reaching 21.2 million views – equivalent to around 15 years of in-venue audiences, if there was a performance every day of the year and no seat went unsold.  
+
+Large-scale organisations such as these – with existing digital departments, an extensive back catalogue of recorded works, and experience with revenue generation and marketing – were well placed to catch the wave. For the independent arts field, with smaller resources, the shift online was necessarily more ad hoc but no less energetic – with pop-up online events like the Re-Connect Online Performance Festival, originating in Iran, or the Lock In Festival, originating in Kenya and aimed at musicians, poets and DJs, opening within weeks.  Google Search Trends during this period gives a sense of the extent to which interest in online formats surged among audiences in the first weeks of the pandemic.
+
+In 2021, interest among audiences may have tapered off, but digital working has sustained its presence within cultural mobility. 29.4% of calls featured on the On the Move website in 2021 were organised in a digital/remote format, or as a hybrid of online work and in-person activity (against 26.1% in 2020). If the online space were considered as a country, it would be the largest mobility destination with 176 calls leading participants there (with Germany in second place at 80). As a region, it would be the second largest continent behind Europe. 
+
+
+```{r, include=TRUE}
+source("scripts/17_calls-time-series.R")
+
+```
+
+
+```{r, include=TRUE}
+source("scripts/18_online-artforms.R")
+
+```
+
+```{r, include=TRUE}
+source("scripts/19_online-scope.R")
+
+```
+
+This move into digital work has brought a certain blurring of lines. As noted in the previous section, the rise of cross-disciplinary work has been a long-term trend in the cultural field, but activity flowing into online spaces has further emphasised this mixing of art forms: around half of all online/remote or hybrid calls in 2021 were open to all artforms or to interdisciplinary approaches. Online working has also eased certain logistical obstacles and made categories less rigid – for instance making it easier to accommodate collective as well as individual applications, with 9.4% open to organisations and collectives and 34.4% open to both (versus 3.1% and 27.9% for in-person calls). Finally, the shift into online modes and remote formats has blurred lines between personal space and workspace – part of a wider trend disrupting boundaries between the private and the professional. These effects have played out within and across a wide variety of different formats. 
+
+
+### Digital approaches
+
+As time has gone on, the focus of attention has expanded from simply presenting work online to encompass a wider consideration of how to actually make it when physical meeting is difficult or impossible. That is, how to find inspiration, get partners, do research, fundraise, create (collaboratively), rehearse, and tour. Lately this has been hard enough in any context, but how to do it while meeting the ambitions of international working and cultural mobility?
+
+```{r, include=TRUE}
+source("scripts/16_digital-affordances.R")
+
+```
+
+
+### Meetings & encounters
+
+In 2021, slightly more than half of calls we recorded in the Meetings & Collaboration category were in online or hybrid formats. Online meetings are of course nothing new, but during the pandemic the pace has accelerated and the capacity has expanded to include more large-scale events like conferences and symposia. A peak example in May 2021 was Culture Funding Watch’s RM Digithon – a 24-hour nonstop virtual meeting marathon uniting several thousand cultural professionals with supporters, investors and grant makers.  Activities like this – where the meeting is based in verbal exchange, has a clear purpose, and involves participants occupying defined roles – have flourished online. Indeed, among all the calls we recorded in 2021 that addressed cultural professionals (producers, managers, etc.), 56% took an online or mixed format.
+
+More challenging to model are artistic meetings and exchanges, as well as the kinds of chance encounters that would normally come about when a person travels to and is immersed in a new environment. Many calls from 2021 tried to remodel this by organising encounters between artists – whether working independently or collaboratively. Of the collaborative formats, several were arranged as tandems with artists from two countries paired at the application stage – as was the case for Musicboard Berlin and Nusasonic’s residency for musicians based in Berlin and Singapore – while others brought together larger groups and allowed partnerships to form between beneficiaries through networking activities. 
+
+Calls that were only online/remote were more likely than hybrid calls to organise beneficiaries into pairs or groups to work on shared projects (24.5% versus 15.8%) and less likely to create exchange between beneficiaries working independently (21.6% versus 31.6%). In both cases, calls were much more likely to matchmake than to allow applicants to select their own collaborators and propose a joint application.
+
+The trade-off in this move online has been a kind of meetingisation of collaborative artistic work. Dance, theatre and related forms are particularly affected as practices that rely heavily on being together in shared space, though other disciplines are also impacted. Musicians can play together online but are hindered by latency and the flattening of visual cues. For visual arts, fundamental qualities like texture, colour and dimensionality can be represented virtually, but often suffer for it if a digital display is not the medium of choice. Interplay in the studio or rehearsal room is replaced with conversation, group exchanges, brainstorming, and presentations. This creates a slant towards formats that support early research processes, or asynchronous modes of collaboration where the creative process is arranged as a kind of relay, with work handed back and forth and stretches of independent work punctuated by check-ins – ‘together alone’.
+
+
+### Residencies, spaces and communities
+
+The move online has been a particular challenge for residencies, as these usually organise themselves around workspaces. Among the programmes we monitored in 2021, the most common approach for ‘virtual’ residencies was to allow artists to work remotely while scheduling a programme of supporting activities online. Training and mentoring initiatives often provided the backbone of these support schemes, with 17.5% of online or hybrid residencies offering workshops or a training programme and 12.5% arranging mentoring.
+
+The provision of a joint working space online – if one discounts Zoom and other standard meeting platforms – was rare (2.9%), though a few projects attempted it, in various ways. The Hybrida artist residency planned its first four weeks online, with the participants building out a sprawling Miro board as a ‘virtual studio’ ahead of a two-week on-site residency in Älvsbacka in Sweden.  Het Nieuwe Instituut invited artists to work on their in-house videoconferencing platform, Enter, and to construct a new room within it.  The Espírito Santo Art Museum in Brazil recreated its building in the Mozilla Hubs VR platform and invited artists to occupy and make work within this virtual site. 
+
+The things that slip through the virtual cracks when physical space isn’t shared include opportunities to work with community groups (1.9%), to access archives and collections (1.9%), or to see work by peers (3.1%), though again there are some isolated counterexamples. The V4@Theatre Critics Residency organised around the Slovakian festival Divadelná Nitra ran online in 2021 with participants watching videos rather than live performances.  NEW NOW in Germany organised a ‘phygital’ festival and called for site-responsive works that would take place both on-site at Zollverein as well as online in a digital recreation of the city’s coal mine and industrial complex.  A web residency organised by ONB Labs invited artists to explore the digital collections and data holdings of the Austrian National Library. 
+
+While such programmes are useful examples of adaptation, it is worth remembering that they remain exceptions. In a survey of 170 residency providers and organisations published in March 2021 by Res Artis, slightly less than a quarter were preparing to potentially offer virtual residencies, and only 7% offered them currently.  Without support it is not easy to adapt. 
+
+
+### Phased programmes
+
+Conversations on support for in-person mobility have often touched on the need for artists and professionals to make multiple trips, as return visits to a destination are necessary to support the various stages of a cross-border project, from ideation to presentation and beyond. There are advantages to modelling this phased process in virtual and hybrid formats, as they can stretch over longer periods of time and fit more easily around existing commitments. Hybrid calls collected by On the Move in 2021 often began with a longer period of online exchange to lay the groundwork of collaboration, then capped this with a short intensive period of in-person work. A good example of this approach was a joint project of Dance Base Scotland and the Ecole des Sables in Senegal, which saw dancers from Scotland and Senegal collaborate for 8 months (1 day a week) to develop a grounding in Acogny Technique, followed by a 2-3 week in-person residency in Senegal, coinciding with the Dakar Biennale.  
+
+A further advantage of organising phased programmes online is that they can achieve a scale that would not be economical with in-person programming – as was seen for instance with the Cradle ReWired project organised by ASSITEJ’s Belgian and South African branches, which brought together 30 artists in a first networking round, selected 12 in pairs/trios for further development, and finally awarded one collaboration with a full commission.  6.9% of all online/hybrid calls gave an opportunity to apply for a further commission or a continuation grant during the programme itself, in this sense adopting a funnel structure that touched a wide initial group before narrowing down for further support.
+
+
+### Presenting work
+
+37.3% of online/remote only calls involved presenting a creative work online, usually simply on a website in the format of an online exhibition, recording or livestream, though sometimes via custom platforms or in VR formats. For hybrid programmes, 15.8% of calls involved an online presentation and 29.8% a physical presentation of a finished work. As noted above, several hybrid programmes offered the opportunity to meet/exchange online to plan and build rapport ahead of coming together in physical space to complete and present a project.
+
+In general we’ve seen some shift between 2020 and 2021 away from simpler presentations – like streaming recordings of past concerts, or screening films of performances – and towards more specialist approaches and collaborations that approach the digital space as its own medium. Many of the inherent questions remain open, however, and projects are often framed in terms of exploratory research into digital modes or remote/distributed forms of presentation. In the latter category, LIFT’s ‘Concept Touring’ call was an interesting example which early in the year invited proposals for ‘projects where the idea, process, work, travels but the artist does not’. 
+
+
+### Digital borders
+
+Overall, one can ask whether any of this redraws the map in terms of how cultural mobility flows through the world. It is early days, but so far, at an organisational level, funders have mostly continued with their existing geographical focuses, and there is limited evidence of the kinds of cross-continental collaboration between funders and organisers that online work theoretically makes easier. In most cases, the new initiatives or formats that have arisen in 2021 are adaptations of ongoing programmes or reallocations of existing funding. As such, the mobility field has both changed and stayed the same: it is the same parts of the sector, and parts of the world, that have the largest voice. 
+
+From the perspective of participants, there is some danger that online working becomes the ‘default mode’ for people who are further from centres of cultural funding, and we already see some examples of programmes that grade terms of participation by proximity – offering in-person programmes for those nearby, and digital alternatives for those at a distance. Such approaches make utilitarian sense, but reinforce geographical inequalities as people on the periphery are channelled into digital projects while people at the centre may exercise choice. 
+
+An additional concern is that the openness of digital mobility itself is deceptive. Just as an opportunity for in-person mobility might be open to the entire world but impossible for some to access due to visa requirements or other expenses, digital calls are frequently open to the world but impractical for many individuals. The uneven distribution of ICT equipment and related skills has been raised by bodies such as UNESCO and the European Commission, in spite of which only 4.4% of online and hybrid calls from our 2021 data provided extra funding for connection, software or equipment costs.
+
+It is also the case that the Internet is itself something of a patchwork, divided by its own equivalent of ‘borders’ in the form of national firewalls, localised services, and domestic regulations, as well as of course by language. Given how many calls plan scheduled activities or collaborations between participants, time zones are an additional obstacle. The only call to address this explicitly in our data from 2021 was a digital residency organised by Blitz Valletta in Malta, which was open to artists from anywhere in the world and offered to adapt its programme to the time zone of the selected participant.  One can imagine this might become a common practice if the idea of universal eligibility is a real one.
+
+
+### Snap back
+
+In November 2021, a University of Exeter research project titled ‘Widening Access to Arts and Culture Through Video Streaming’ released the early findings of a survey of UK theatres. They reported a ‘snap-back’ in which ‘over half of all publicly-subsidised UK theatres that pivoted online during the first 18-months of the pandemic have now returned to producing live performances only’. Of those surveyed, 42% of large theatres had dropped their digital activities by autumn 2021, while for mid-sized, small, and micro theatres the figure was 80%.  The researchers describe this gap as a ‘digital divide’ – a phrase echoed in a preliminary report on the impact of Covid-19 issued by UNESCO in February 2021, which stressed that ‘digitisation is not a one-size-fits-all solution’, for audiences or for artists.
+
+The mobility field didn’t have the option of a snap back in 2021 given that regulations around travel have been slow to change – but there also seems to have been limited appetite for one. Instead of a rushing back, we tend to see a cautious return for some in-person programmes (often with online backups, just in case) and in general a rise in mixed formats, which in 2021 made up 10.9% of calls (against 9% in 2020). Hybrid approaches have the potential to combine the best of both worlds, though in the introduction to the Ukrainian Institute’s Cultural Relations in the New Normal, a catalogue of selected projects with innovative models, the authors note both the challenges and the promises of such projects: ‘We tend to observe that hybrid project models combining online and offline forms, take more time and effort to develop. Usually, they are tailored solutions reflecting the specifics of delivery organisations, their audiences and partners. Hybrid models are more complex to put in place, they are less described compared to online ones, and they are exactly the area wherein a lot of innovation is expected to happen soon.’ 
+
+All in all, digital mobility is likely to stay because it addresses needs beyond the pandemic – including the urgency of lessening environmental impacts – and because it is convenient. In-person mobility is likely to continue because nothing beats being in the room. Where would that leave us? In an ideal world, one still within reach, with more individual choice, more opportunities for a greater diversity of artists and cultural professionals, and less environmental harm. 
+
+The path ahead is probably less of a ‘break’ from old ways of working, and more a process of absorption that incorporates new ideas and experiences back into the body of existing practices – and there are already many signs of programmes taking this approach. One is the Pina Bausch Fellowship for choreographers – cancelled in 2020, online in 2021, and now embracing a new flexibility: ‘In 2022, the Pina Bausch Fellowship will support face-to-face encounters again. Recognizing the opportunities that digital formats offer, the Fellowship will support a broader range of formats next to international, on-site fellowships, such as local and virtual cooperations as well as hybrid formats. By offering a variety of cooperation formats, the Fellowship adapts to applicants’ individual needs and interests. It provides freedom in designing fitting cooperation formats that help them develop their unique artistic signature.’
