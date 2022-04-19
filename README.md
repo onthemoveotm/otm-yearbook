@@ -1,11 +1,11 @@
 # Cultural Mobility Yearbook 2021, by On the Move
 
-This repo contains data and analysis on funded mobility opportunities in the arts and culture sector used for [On the Move](http://on-the-move.org)'s 2021 Cultural Mobility Yearbook.
+This repo contains data and analysis on funded mobility opportunities in the arts and culture sector used for [On the Move](https://on-the-move.org)'s 2021 Cultural Mobility Yearbook.
 
 You can download the main, processed dataset and final Yearbook here:
 
-:card_index_dividers: [Download the full dataset](http://on-the-move.org/)\
-:blue_book: [Download the Yearbook](http://on-the-move.org/) 
+:card_index_dividers: [Download the full dataset](https://on-the-move.org/sites/default/files/library/2022-04/OTM_yearbook-2022-data_2022-04-19.xlsx)\
+:blue_book: [Download the Yearbook](https://on-the-move.org/sites/default/files/library/2022-04/OTM_yearbook-2022.pdf) 
 
 For those who want to dig deeper, the `/data` and `/scripts` directories contain the data and code used to create the graphs and statistics that appear in the final publication.
 
@@ -15,7 +15,7 @@ The `/data` directory contains:
 
 | File      | Description |
 | ------------- | ------------- |
-| `CREATIVE-EUROPE_project-funding`  | Data from the European Commmission on projects awarded under the Creative Europe programme. Source: https://ec.europa.eu/programmes/creative-europe/projects/ce-projects-compendium  |
+| `CREATIVE-EUROPE_project-funding`  | Data from the European Commmission on projects awarded under the Creative Europe programme. Source: https://ec.europa.eu/programmes/creative-europe/projects/ce-projects-compendium/  |
 | `EU_creative-europe-countries`  |  List of countries and their Creative Europe status. |
 | `EU-OTM_project-ids`  | List of calls on the On the Move website that were supported as cooperation projects by Creative Europe with their relevant CE Project Number. |
 | `OTM_website-data`  | Main dataset of calls from the On the Move website (2020-2021). See below for information on the variables.  |
@@ -24,7 +24,7 @@ The `/data` directory contains:
 
 ## On the Move data - sources and limitations
 
-Data collected by On the Move reflects our [editorial policy](http://on-the-move.org) and focus. In short, we concentrate on funded programmes that cover at least some of the costs of travel (or that offer remuneration in the case of online/remote programmes). The calls that are posted to the website are generally one-off calls or relate to temporary or shifting programmes rather than permanent ones (which are separately listed in our [mobility funding guides](http://on-the-move.org)).
+Data collected by On the Move reflects our [editorial policy](https://on-the-move.org/about/editorial-policy) and focus. In short, we concentrate on funded programmes that cover at least some of the costs of travel (or that offer remuneration in the case of online/remote programmes). The calls that are posted to the website are generally one-off calls or relate to temporary or shifting programmes rather than permanent ones (which are separately listed in our [mobility funding guides](https://on-the-move.org/funding)).
 
 Blank values appear in calls where we weren't able to collect the relevant data or the variable is not applicable. These are generally filtered out in the analysis.
 
@@ -53,3 +53,5 @@ Blank values appear in calls where we weren't able to collect the relevant data 
 This data is licensed under CC BY-NC 4.0, meaning you can share and adapt it for non-commerical purposes with proper credit. No permission needed, but we'd be pleased to hear from you if you're doing similar research, are interested in this area of work, or have any questions: data@on-the-move.org
 
 On the Move will ultimately publish three Yearbooks over the period 2022-2024. The next edition in 2023 will have a special focus on green and sustainable mobility. The 2024 publication will focus on accessibility and inclusion.
+
+<img src="https://ec.europa.eu/regional_policy/sources/information/logos_downloadcenter/eu_co_funded_en.jpg" width="300" height="auto" alt='Co-funded by the European Union'>
