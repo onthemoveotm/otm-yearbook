@@ -1,6 +1,6 @@
-# Cultural Mobility Yearbook 2021, by On the Move
+# Cultural Mobility Yearbook 2022, by On the Move
 
-This repo contains data and analysis on funded mobility opportunities in the arts and culture sector used for [On the Move](https://on-the-move.org)'s 2021 Cultural Mobility Yearbook.
+This repo contains data and analysis on funded mobility opportunities in the arts and culture sector used for [On the Move](https://on-the-move.org)'s 2022 Cultural Mobility Yearbook.
 
 You can download the main, processed dataset and final Yearbook here:
 
@@ -54,4 +54,4 @@ This data is licensed under CC BY-NC 4.0, meaning you can share and adapt it for
 
 On the Move will ultimately publish three Yearbooks over the period 2022-2024. The next edition in 2023 will have a special focus on green and sustainable mobility. The 2024 publication will focus on accessibility and inclusion.
 
-<img src="https://ec.europa.eu/regional_policy/sources/information/logos_downloadcenter/eu_co_funded_en.jpg" width="300" height="auto" alt='Co-funded by the European Union'>
+<img src="https://ec.europa.eu/regional_policy/images/information-sources/logo-download-center/eu_co_funded_en.jpg" width="300" height="auto" alt='Co-funded by the European Union'>
